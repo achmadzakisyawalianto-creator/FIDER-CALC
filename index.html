@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perhitungan Fire Detector</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="menu" class="slide active">
+    <div class="container">
+       <div class="header-app">
+
+    <!-- Logo -->
+    <img src="logo-fidercalc.png" class="logo-app">
+
+    <!-- Text -->
+    <div class="title-wrapper">
+
+        <div class="logo-title">
+            <span class="black">FIDER-</span>
+            <span class="orange">CALC</span>
+        </div>
+
+        <div class="logo-subtitle">
+            DETEKTOR KEBAKARAN
+        </div>
+
+        <div class="logo-line"></div>
+
+    </div>
+
+</div>
+
+
+      <div class="menu-grid">
+        <div class="menu-item" onclick="openPage('materi')">
+          <img src="https://cdn-icons-png.flaticon.com/512/2942/2942849.png" alt="Icon Materi">
+          <p>MATERI</p>
+        </div>
+        <div class="menu-item" onclick="openPage('regulasi')">
+          <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Icon Regulasi">
+          <p>REGULASI</p>
+        </div>
+        <div class="menu-item" onclick="openPage('kalkulator')">
+          <img src="kalkulator.png" alt="Icon Kalkulator">
+          <p>KALKULATOR</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content" class="slide">
+    <div class="container">
+      <button class="back" onclick="backMenu()">← Kembali ke Menu</button>
+      <div id="area"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

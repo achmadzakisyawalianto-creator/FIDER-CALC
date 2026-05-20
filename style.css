@@ -1,0 +1,684 @@
+:root {
+  --primary:#ff6a00;
+  --dark:#ff4500;
+  --text:#ffffff;
+  --radius:18px;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  margin:0;
+  padding:0;
+}
+
+/* ===== BACKGROUND ===== */
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  /* AGAR BISA SCROLL */
+  overflow-x:hidden;
+  overflow-y:auto;
+
+  position:relative;
+
+  background:
+    linear-gradient(rgba(0,0,0,.10), rgba(0,0,0,.10)),
+    url('background.png') center center/cover no-repeat;
+
+  background-attachment:fixed;
+}
+
+
+/* ===== SLIDE ===== */
+.slide{
+  display:none;
+  min-height:100vh;
+  padding:30px;
+}
+
+.slide.active{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+  margin:40px 0;
+  width:100%;
+  max-width:1200px;
+  background:rgba(255,255,255,.93);
+  padding:45px;
+  border-radius:28px;
+  box-shadow:0 10px 35px rgba(0,0,0,.45);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* ===== LOGO ICON KIRI ATAS ===== */
+.logo-app{
+  position:absolute;
+  top:20px;
+  left:20px;
+
+  /* LOGO DIPERBESAR */
+  width:130px;
+  height:130px;
+
+  object-fit:contain;
+
+  /* HILANGKAN BACKGROUND GELAP */
+  mix-blend-mode:multiply;
+
+  /* EFEK GLOW */
+  filter:
+    drop-shadow(0 0 15px rgba(255,120,0,.45))
+    drop-shadow(0 0 30px rgba(255,80,0,.25));
+
+  z-index:10;
+}
+
+/* =========================
+   LOGO TEXT FIDER-CALC
+========================= */
+
+.logo-title{
+  font-size:95px;
+  font-weight:900;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  line-height:1.1;
+
+  /* TAMBAHAN */
+  padding-top:40px;
+
+  margin-top:25px;
+  margin-bottom:10px;
+
+  text-align:center;
+}
+
+/* Tulisan FIDER */
+.logo-title .white{
+  color:#111111;
+
+  font-weight:900;
+
+  text-shadow:
+    0 0 10px rgba(0,0,0,.08),
+    0 0 20px rgba(0,0,0,.05);
+}
+
+/* Tulisan CALC */
+.logo-title .orange{
+  background:linear-gradient(
+    to bottom,
+    #ffd27a,
+    #ff8a00,
+    #ff4d00
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  font-weight:900;
+
+  text-shadow:
+    0 0 15px rgba(255,120,0,.45),
+    0 0 35px rgba(255,80,0,.30);
+}
+
+/* ===== SUBTITLE ===== */
+.logo-subtitle{
+  font-size:30px;
+  letter-spacing:8px;
+  color:#3d3d3d;
+  font-weight:700;
+
+  margin-bottom:25px;
+
+  text-transform:uppercase;
+  text-align:center;
+}
+
+/* ===== GARIS ORANGE ===== */
+.logo-line{
+  width:150px;
+  height:6px;
+
+  background:linear-gradient(
+    to right,
+    #ff6a00,
+    #ff9500
+  );
+
+  border-radius:20px;
+
+  margin:22px auto 40px auto;
+
+  box-shadow:
+    0 0 15px rgba(255,106,0,.45);
+}
+
+/* ===== DESKRIPSI ===== */
+.description{
+  font-size:1.25rem;
+  line-height:2;
+  color:#2f2f2f;
+  max-width:900px;
+  margin:auto;
+  margin-bottom:50px;
+  font-style:italic;
+}
+
+/* ===== MENU ===== */
+.menu-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:35px;
+}
+
+.menu-item{
+  width:240px;
+  padding:40px 25px;
+  border-radius:24px;
+  background:#f4e7e1;
+  cursor:pointer;
+  transition:.35s;
+  box-shadow:0 5px 18px rgba(0,0,0,.10);
+}
+
+.menu-item:hover{
+  background:var(--primary);
+  color:#fff;
+  transform:translateY(-8px) scale(1.04);
+
+  box-shadow:
+    0 10px 25px rgba(255,106,0,.35);
+}
+
+.menu-item img{
+  width:90px;
+  margin-bottom:20px;
+  transition:.3s;
+}
+
+.menu-item:hover img{
+  transform:scale(1.08);
+}
+
+.menu-item p{
+  font-family:'Sora',sans-serif;
+  font-weight:800;
+  letter-spacing:2px;
+  font-size:1.3rem;
+}
+
+/* ===== BUTTON ===== */
+button{
+  border:none;
+  border-radius:var(--radius);
+  padding:12px 24px;
+  font-size:1rem;
+  cursor:pointer;
+  font-family:'Sora',sans-serif;
+  font-weight:600;
+  letter-spacing:.6px;
+}
+
+.back{
+  background:var(--primary);
+  color:#fff;
+  margin-bottom:20px;
+}
+
+.back:hover{
+  background:var(--dark);
+}
+
+.calc{
+  background:var(--primary);
+  color:#fff;
+}
+
+.reset{
+  background:#6c757d;
+  color:#fff;
+}
+
+/* ===== FORM ===== */
+.form-group{
+  margin:15px auto;
+  max-width:300px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:1.05rem;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:6px;
+  font-weight:600;
+  color:#3a1d1d;
+  text-align:left;
+}
+
+/* ===== RESULT ===== */
+.result{
+  margin-top:25px;
+  padding:20px;
+  border-left:6px solid var(--primary);
+  text-align:left;
+  background:#fff;
+  font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+/* ===== KALKULATOR LAYOUT ===== */
+/* =========================
+   LAYOUT HASIL KIRI KANAN
+========================= */
+
+.calc-layout{
+  display:grid;
+
+  /* BAGIAN KIRI DAN KANAN */
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:30px;
+
+  align-items:start;
+
+  width:100%;
+}
+
+/* BAGIAN KIRI */
+.calc-left{
+  width:100%;
+}
+
+/* BAGIAN KANAN */
+.calc-right{
+  width:100%;
+}
+
+/* BOX HASIL */
+.calc-step{
+  margin-top:0;
+  margin-bottom:25px;
+
+  padding:22px;
+
+  border-radius:20px;
+
+  background:#f8f8f8;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,.05);
+}
+
+/* CANVAS FULL */
+canvas{
+  width:100% !important;
+  max-width:100%;
+
+  display:block;
+}
+
+.calc-left,
+.calc-right{
+  width:100%;
+  text-align:left;
+}
+
+.calc-right table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.calc-right th,
+.calc-right td{
+  border:1px solid #ddd;
+  padding:8px;
+  text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.95rem;
+}
+
+.calc-right th{
+  background:#f3e6df;
+  font-weight:600;
+}
+
+.calc-step{
+  background:#f9f9f9;
+  border-radius:12px;
+  padding:18px;
+  margin-top:20px;
+  text-align:left;
+  font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+.calc-step h3{
+  color:#e63946;
+  margin-bottom:10px;
+}
+
+.calc-step code{
+  background:#fff;
+  padding:4px 8px;
+  border-radius:6px;
+  display:inline-block;
+  margin:4px 0;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.95rem;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1,h2,h3,h4,h5{
+  font-family:'Sora',sans-serif;
+  font-weight:600;
+  letter-spacing:.6px;
+  color:#3a1d1d;
+}
+
+h1{
+  font-size:2.6rem;
+}
+
+p,li{
+  line-height:1.9;
+  font-size:1.05rem;
+}
+
+@media(max-width:768px){
+
+  .container{
+    padding:25px 18px;
+  }
+
+  /* LOGO */
+  .logo-app{
+    position:relative;
+
+    width:65px;
+    height:65px;
+
+    top:0;
+    left:0;
+
+    margin:auto;
+    display:block;
+  }
+
+  /* JUDUL */
+  .logo-title{
+    font-size:42px;
+    letter-spacing:1px;
+    line-height:1.1;
+
+    margin-top:10px;
+    padding-top:0;
+  }
+
+  /* SUBTITLE */
+  .logo-subtitle{
+    font-size:13px;
+    letter-spacing:3px;
+    line-height:1.5;
+  }
+
+  /* GARIS */
+  .logo-line{
+    width:100px;
+    height:5px;
+  }
+
+  /* MENU */
+  .menu-item{
+    width:100%;
+    max-width:280px;
+    padding:30px 20px;
+  }
+
+  .menu-item img{
+    width:70px;
+  }
+
+  button{
+    width:100%;
+    margin-bottom:10px;
+  }
+
+  .calc-layout{
+    grid-template-columns:1fr;
+  }
+
+}
+
+/* ===================================
+   MATERI FIRE DETECTOR
+=================================== */
+
+.materi-wrapper{
+  max-width:1100px;
+  margin:auto;
+  text-align:left;
+}
+
+/* JUDUL BESAR */
+.materi-title{
+  text-align:center;
+  font-size:2.5rem;
+  font-weight:800;
+  margin-bottom:20px;
+  color:#2c0f0f;
+}
+
+/* DESKRIPSI AWAL */
+.materi-intro{
+  text-align:center;
+  font-size:1.1rem;
+  line-height:2;
+  margin-bottom:40px;
+  color:#333;
+}
+
+/* CARD */
+.materi-card{
+  background:rgba(255,255,255,.92);
+
+  border-radius:24px;
+
+  padding:35px;
+
+  margin-bottom:35px;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+  transition:.35s;
+}
+
+.materi-card:hover{
+  transform:translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(255,106,0,.18);
+}
+
+/* HEADER CARD */
+.materi-header{
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  gap:15px;
+
+  margin-bottom:20px;
+}
+
+/* ICON */
+.materi-icon{
+  width:85px;
+  height:85px;
+  object-fit:contain;
+}
+
+/* JUDUL CARD */
+.materi-card h2{
+  font-size:2rem;
+  color:#2d1616;
+
+  text-align:center;
+}
+
+
+/* SUBTITLE */
+.materi-sub{
+  color:#ff6a00;
+  font-weight:700;
+  margin-top:5px;
+
+  text-align:center;
+}
+
+/* PARAGRAF */
+.materi-card p{
+  line-height:2;
+  font-size:1.05rem;
+  color:#333;
+}
+
+/* LIST */
+.materi-card ul{
+  margin-top:20px;
+  padding-left:20px;
+}
+
+.materi-card li{
+  margin-bottom:12px;
+  line-height:1.8;
+}
+
+/* APLIKASI */
+.aplikasi-box{
+  margin-top:20px;
+
+  background:#fff3eb;
+
+  border-left:6px solid #ff6a00;
+
+  padding:18px;
+
+  border-radius:14px;
+
+  font-style:italic;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .materi-title{
+    font-size:1.8rem;
+  }
+
+  .materi-header{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .materi-card{
+    padding:25px;
+  }
+
+  .materi-card h2{
+    font-size:1.5rem;
+  }
+
+  .materi-icon{
+    width:70px;
+    height:70px;
+  }
+
+}
+.materi-card:hover{
+  transform:
+    translateY(-6px)
+    scale(1.01);
+
+  box-shadow:
+    0 15px 35px rgba(255,106,0,.18);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:20px;
+  overflow:hidden;
+  border-radius:16px;
+}
+
+table th{
+  background:#ff6a00;
+  color:white;
+  padding:14px;
+}
+
+table td{
+  padding:12px;
+  background:#fff;
+}
+
+table tr:nth-child(even) td{
+  background:#fff5ef;
+}
+
+.materi-card ul{
+  list-style:none;
+  padding-left:0;
+}
+
+.materi-card ul li{
+  position:relative;
+  padding-left:28px;
+}
+
+.materi-card ul li::before{
+  content:"🔥";
+  position:absolute;
+  left:0;
+}
+
+.materi-card{
+  animation:fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
