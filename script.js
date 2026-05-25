@@ -17,7 +17,9 @@ function openPage(type) {
   content.classList.add('active');
   
 // Render Material Page
+// Render Material Page
 if (type === 'materi') {
+
   area.innerHTML = `
 
   <div class="materi-wrapper">
@@ -35,271 +37,580 @@ if (type === 'materi') {
     </p>
 
     <!-- FUNGSI -->
-    <div class="materi-card">
+    <div class="accordion">
 
-      <div class="materi-header">
+      <button class="accordion-btn">
+        🔥 Fungsi Fire Detector
+      </button>
 
-        <img src="img/fire-alarm.png" 
-             class="materi-icon"
-             onerror="this.style.display='none'">
+      <div class="accordion-content">
 
-        <div>
-          <h2>Fungsi Fire Detector</h2>
-          <div class="materi-sub">
-            Sistem Proteksi Kebakaran
+        <div class="materi-card">
+
+          <div class="materi-header">
+
+            <img src="img/fire-alarm.png" 
+                 class="materi-icon"
+                 onerror="this.style.display='none'">
+
+            <div>
+              <h2>Fungsi Fire Detector</h2>
+
+              <div class="materi-sub">
+                Sistem Proteksi Kebakaran
+              </div>
+            </div>
+
           </div>
+
+          <ul>
+            <li>Mendeteksi kebakaran sejak dini</li>
+            <li>Memberikan peringatan kepada penghuni gedung</li>
+            <li>Mengaktifkan sistem alarm kebakaran</li>
+            <li>Mendukung sistem pemadam otomatis</li>
+            <li>Mengurangi korban jiwa dan kerugian material</li>
+          </ul>
+
         </div>
 
       </div>
-
-      <ul>
-        <li>Mendeteksi kebakaran sejak dini</li>
-        <li>Memberikan peringatan kepada penghuni gedung</li>
-        <li>Mengaktifkan sistem alarm kebakaran</li>
-        <li>Mendukung sistem pemadam otomatis</li>
-        <li>Mengurangi korban jiwa dan kerugian material</li>
-      </ul>
 
     </div>
 
     <!-- HEAT DETECTOR -->
-    <div class="materi-card">
+    <div class="accordion">
 
-      <div class="materi-header">
+      <button class="accordion-btn">
+        🔥 Heat Detector
+      </button>
 
-        <img src="img/heat-detector.png"
-             class="materi-icon"
-             onerror="this.style.display='none'">
+      <div class="accordion-content">
 
-        <div>
-          <h2>🔥 Heat Detector</h2>
-          <div class="materi-sub">
-            Detektor Panas
+        <div class="materi-card">
+
+          <div class="materi-header">
+
+            <img src="img/heat-detector.png"
+                 class="materi-icon"
+                 onerror="this.style.display='none'">
+
+            <div>
+              <h2>Heat Detector</h2>
+
+              <div class="materi-sub">
+                Detektor Panas
+              </div>
+            </div>
+
           </div>
+
+          <p>
+            Heat Detector adalah detektor yang bekerja berdasarkan 
+            suhu (temperatur) tertentu. Detector ini digunakan 
+            pada area yang memiliki potensi panas tinggi seperti 
+            dapur, ruang genset, dan gudang.
+          </p>
+
+          <ul>
+            <li>Fixed Temperature</li>
+            <li>Rate of Rise</li>
+            <li>Rate Compensation</li>
+          </ul>
+
+          <div class="aplikasi-box">
+            Aplikasi: dapur, ruang genset, gudang
+          </div>
+
         </div>
 
-      </div>
-
-      <p>
-        Heat Detector adalah detektor yang bekerja berdasarkan 
-        suhu (temperatur) tertentu. Detector ini digunakan 
-        pada area yang memiliki potensi panas tinggi seperti 
-        dapur, ruang genset, dan gudang.
-      </p>
-
-      <ul>
-        <li>Fixed Temperature</li>
-        <li>Rate of Rise</li>
-        <li>Rate Compensation</li>
-      </ul>
-
-      <div class="aplikasi-box">
-        Aplikasi: dapur, ruang genset, gudang
       </div>
 
     </div>
 
     <!-- SMOKE DETECTOR -->
-    <div class="materi-card">
+    <div class="accordion">
 
-      <div class="materi-header">
+      <button class="accordion-btn">
+        💨 Smoke Detector
+      </button>
 
-        <img src="img/smoke-detector.png"
-             class="materi-icon"
-             onerror="this.style.display='none'">
+      <div class="accordion-content">
 
-        <div>
-          <h2>💨 Smoke Detector</h2>
-          <div class="materi-sub">
-            Detektor Asap
+        <div class="materi-card">
+
+          <div class="materi-header">
+
+            <img src="img/smoke-detector.png"
+                 class="materi-icon"
+                 onerror="this.style.display='none'">
+
+            <div>
+              <h2>Smoke Detector</h2>
+
+              <div class="materi-sub">
+                Detektor Asap
+              </div>
+            </div>
+
           </div>
+
+          <p>
+            Smoke Detector adalah detektor yang bekerja 
+            mendeteksi partikel asap di udara akibat proses 
+            pembakaran. Detector ini umum digunakan pada 
+            area perkantoran, hotel, dan rumah sakit.
+          </p>
+
+          <ul>
+            <li>Ionization Smoke Detector</li>
+            <li>Photoelectric Smoke Detector</li>
+            <li>Beam Smoke Detector</li>
+          </ul>
+
+          <div class="aplikasi-box">
+            Aplikasi: kantor, hotel, rumah sakit
+          </div>
+
         </div>
 
-      </div>
-
-      <p>
-        Smoke Detector adalah detektor yang bekerja 
-        mendeteksi partikel asap di udara akibat proses 
-        pembakaran. Detector ini umum digunakan pada 
-        area perkantoran, hotel, dan rumah sakit.
-      </p>
-
-      <ul>
-        <li>Ionization Smoke Detector</li>
-        <li>Photoelectric Smoke Detector</li>
-        <li>Beam Smoke Detector</li>
-      </ul>
-
-      <div class="aplikasi-box">
-        Aplikasi: kantor, hotel, rumah sakit
       </div>
 
     </div>
 
     <!-- PRINSIP KERJA -->
-    <div class="materi-card">
+    <div class="accordion">
 
-      <div class="materi-header">
+      <button class="accordion-btn">
+        ⚙️ Prinsip Kerja Sistem
+      </button>
 
-        <img src="img/system.png"
-             class="materi-icon"
-             onerror="this.style.display='none'">
+      <div class="accordion-content">
 
-        <div>
-          <h2>Prinsip Kerja Sistem</h2>
-          <div class="materi-sub">
-            Fire Alarm System
+        <div class="materi-card">
+
+          <div class="materi-header">
+
+            <img src="img/system.png"
+                 class="materi-icon"
+                 onerror="this.style.display='none'">
+
+            <div>
+              <h2>Prinsip Kerja Sistem</h2>
+
+              <div class="materi-sub">
+                Fire Alarm System
+              </div>
+            </div>
+
           </div>
+
+          <ol class="materi-list">
+            <li>Sensor mendeteksi gejala kebakaran</li>
+            <li>Sinyal dikirim ke Fire Alarm Control Panel</li>
+            <li>Panel mengaktifkan alarm suara & lampu</li>
+            <li>Sistem lanjutan bekerja (sprinkler, damper, dll)</li>
+          </ol>
+
         </div>
 
       </div>
-
-      <ol class="materi-list">
-        <li>Sensor mendeteksi gejala kebakaran</li>
-        <li>Sinyal dikirim ke Fire Alarm Control Panel</li>
-        <li>Panel mengaktifkan alarm suara & lampu</li>
-        <li>Sistem lanjutan bekerja (sprinkler, damper, dll)</li>
-      </ol>
 
     </div>
 
     <!-- RUMUS -->
-    <div class="materi-card">
+    <div class="accordion">
 
-      <div class="materi-header">
+      <button class="accordion-btn">
+        📐 Rumus Perhitungan
+      </button>
 
-        <img src="img/calculator.png"
-             class="materi-icon"
-             onerror="this.style.display='none'">
+      <div class="accordion-content">
 
-        <div>
-          <h2>Rumus Perhitungan</h2>
-          <div class="materi-sub">
-            SNI 03-3985-2000
+        <div class="materi-card">
+
+          <div class="materi-header">
+
+            <img src="img/calculator.png"
+                 class="materi-icon"
+                 onerror="this.style.display='none'">
+
+            <div>
+              <h2>Rumus Perhitungan</h2>
+
+              <div class="materi-sub">
+                SNI 03-3985-2000
+              </div>
+            </div>
+
           </div>
+
+          <p>
+            Perhitungan jumlah fire detector mengacu pada 
+            jarak maksimum pemasangan detector yang telah dikoreksi.
+          </p>
+
+          <div class="calc-step">
+
+            <h4>Rumus Dasar</h4>
+
+            <code>S = S₀ × F<sub>h</sub></code><br>
+            <code>JDP = ⌈ P / S ⌉</code><br>
+            <code>JDL = ⌈ L / S ⌉</code><br>
+            <code>TJD = JDP × JDL</code><br>
+
+          </div>
+
+          <h4>Keterangan</h4>
+
+          <ul>
+            <li><b>P</b> = Panjang ruangan</li>
+            <li><b>L</b> = Lebar ruangan</li>
+            <li><b>S</b> = Jarak antar detector</li>
+            <li><b>F<sub>h</sub></b> = Faktor tinggi langit-langit</li>
+            <li><b>TJD</b> = Total jumlah detector</li>
+          </ul>
+
         </div>
 
       </div>
-
-      <p>
-        Perhitungan jumlah fire detector mengacu pada 
-        jarak maksimum pemasangan detector yang telah dikoreksi.
-      </p>
-
-      <div class="calc-step">
-
-        <h4>Rumus Dasar</h4>
-
-        <code>S = S₀ × F<sub>h</sub></code><br>
-        <code>JDP = ⌈ P / S ⌉</code><br>
-        <code>JDL = ⌈ L / S ⌉</code><br>
-        <code>TJD = JDP × JDL</code><br>
-
-      </div>
-
-      <h4>Keterangan</h4>
-
-      <ul>
-        <li><b>P</b> = Panjang ruangan</li>
-        <li><b>L</b> = Lebar ruangan</li>
-        <li><b>S</b> = Jarak antar detector</li>
-        <li><b>F<sub>h</sub></b> = Faktor tinggi langit-langit</li>
-        <li><b>TJD</b> = Total jumlah detector</li>
-      </ul>
 
     </div>
 
     <!-- TABEL -->
-    <div class="materi-card">
+    <div class="accordion">
 
-      <div class="materi-header">
+      <button class="accordion-btn">
+        📊 Faktor Koreksi
+      </button>
 
-        <img src="img/table.png"
-             class="materi-icon"
-             onerror="this.style.display='none'">
+      <div class="accordion-content">
 
-        <div>
-          <h2>Faktor Koreksi</h2>
-          <div class="materi-sub">
-            Tinggi Langit-langit
+        <div class="materi-card">
+
+          <div class="materi-header">
+
+            <img src="img/table.png"
+                 class="materi-icon"
+                 onerror="this.style.display='none'">
+
+            <div>
+              <h2>Faktor Koreksi</h2>
+
+              <div class="materi-sub">
+                Tinggi Langit-langit
+              </div>
+            </div>
+
           </div>
+
+          <table>
+            <tr>
+              <th>Tinggi (m)</th>
+              <th>Faktor (%)</th>
+              <th>Fh</th>
+            </tr>
+
+            <tr><td>0 – 3,0</td><td>100%</td><td>1,00</td></tr>
+            <tr><td>3,0 – 3,6</td><td>91%</td><td>0,91</td></tr>
+            <tr><td>3,6 – 4,2</td><td>84%</td><td>0,84</td></tr>
+            <tr><td>4,2 – 4,8</td><td>77%</td><td>0,77</td></tr>
+            <tr><td>4,8 – 5,4</td><td>71%</td><td>0,71</td></tr>
+            <tr><td>5,4 – 6,0</td><td>64%</td><td>0,64</td></tr>
+            <tr><td>6,0 – 6,7</td><td>58%</td><td>0,58</td></tr>
+          </table>
+
         </div>
 
       </div>
-
-      <table>
-        <tr>
-          <th>Tinggi (m)</th>
-          <th>Faktor (%)</th>
-          <th>Fh</th>
-        </tr>
-
-        <tr><td>0 – 3,0</td><td>100%</td><td>1,00</td></tr>
-        <tr><td>3,0 – 3,6</td><td>91%</td><td>0,91</td></tr>
-        <tr><td>3,6 – 4,2</td><td>84%</td><td>0,84</td></tr>
-        <tr><td>4,2 – 4,8</td><td>77%</td><td>0,77</td></tr>
-        <tr><td>4,8 – 5,4</td><td>71%</td><td>0,71</td></tr>
-        <tr><td>5,4 – 6,0</td><td>64%</td><td>0,64</td></tr>
-        <tr><td>6,0 – 6,7</td><td>58%</td><td>0,58</td></tr>
-      </table>
 
     </div>
 
     <!-- CATATAN -->
-    <div class="materi-card">
+    <div class="accordion">
 
-      <div class="materi-header">
+      <button class="accordion-btn">
+        📝 Catatan Penting
+      </button>
 
-        <img src="img/note.png"
-             class="materi-icon"
-             onerror="this.style.display='none'">
+      <div class="accordion-content">
 
-        <div>
-          <h2>Catatan Penting</h2>
-          <div class="materi-sub">
-            Perhitungan Detector
+        <div class="materi-card">
+
+          <div class="materi-header">
+
+            <img src="img/note.png"
+                 class="materi-icon"
+                 onerror="this.style.display='none'">
+
+            <div>
+              <h2>Catatan Penting</h2>
+
+              <div class="materi-sub">
+                Perhitungan Detector
+              </div>
+            </div>
+
           </div>
+
+          <ul>
+            <li>Pembulatan jumlah detector dilakukan ke atas</li>
+            <li>Setiap ruangan minimal memiliki 1 detector</li>
+            <li>Detector dapat ditempatkan di titik tengah ruangan</li>
+            <li>Acuan sesuai SNI 03-3985-2000</li>
+          </ul>
+
         </div>
 
       </div>
-
-      <ul>
-        <li>Pembulatan jumlah detector dilakukan ke atas</li>
-        <li>Setiap ruangan minimal memiliki 1 detector</li>
-        <li>Detector dapat ditempatkan di titik tengah ruangan</li>
-        <li>Acuan sesuai SNI 03-3985-2000</li>
-      </ul>
 
     </div>
 
   </div>
 
   `;
+
+  // ACCORDION FUNCTION
+  const accordionBtn =
+  document.querySelectorAll('.accordion-btn');
+
+  accordionBtn.forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+      const content =
+      btn.nextElementSibling;
+
+      if(content.style.maxHeight){
+
+        content.style.maxHeight = null;
+
+      } else {
+
+        content.style.maxHeight =
+        content.scrollHeight + "px";
+
+      }
+
+    });
+
+  });
+
 }
 
   // Render Regulation Page
-  if (type === 'regulasi') {
-    area.innerHTML = `
-      <h2>Regulasi</h2>
-      <p><b>SNI 03-3985-2000</b><br>
-      Tata cara perencanaan, pemasangan, dan pengujian sistem deteksi dan alarm kebakaran.</p>
+ // REGULASI
+if (type === 'regulasi') {
 
-      <div style="margin:20px 0">
-        <a href="SNI 03-3985-2000, Fire Alarm.pdf" target="_blank" class="back" style="display:inline-block; margin-right:10px; text-decoration:none;">📄 Buka PDF</a>
-        <a href="SNI 03-3985-2000, Fire Alarm.pdf" download class="reset" style="display:inline-block; padding:12px 24px; border-radius:12px; text-decoration:none;">⬇ Download PDF</a>
+  area.innerHTML = `
+
+  <div class="materi-wrapper">
+
+    <!-- TITLE -->
+    <h1 class="materi-title">
+      Regulasi Fire Detector
+    </h1>
+
+    <p class="materi-intro">
+      Regulasi berikut digunakan sebagai acuan dalam 
+      perencanaan, pemasangan, dan pengujian sistem 
+      deteksi serta alarm kebakaran.
+    </p>
+
+    <!-- SNI -->
+    <div class="accordion">
+
+      <button class="accordion-btn">
+        📘 SNI 03-3985-2000
+      </button>
+
+      <div class="accordion-content">
+
+        <div class="materi-card">
+
+          <div class="materi-header">
+
+            <img src="img/regulation.png"
+                 class="materi-icon"
+                 onerror="this.style.display='none'">
+
+            <div>
+
+              <h2>SNI 03-3985-2000</h2>
+
+              <div class="materi-sub">
+                Sistem Deteksi dan Alarm Kebakaran
+              </div>
+
+            </div>
+
+          </div>
+
+          <p>
+            Tata cara perencanaan, pemasangan, dan pengujian 
+            sistem deteksi dan alarm kebakaran sesuai standar nasional Indonesia.
+          </p>
+
+          <div style="margin:25px 0; text-align:center;">
+
+            <a href="SNI 03-3985-2000, Fire Alarm.pdf"
+               target="_blank"
+               class="back"
+               style="
+               display:inline-block;
+               margin-right:10px;
+               text-decoration:none;
+               ">
+
+               📄 Buka PDF
+
+            </a>
+
+            <a href="SNI 03-3985-2000, Fire Alarm.pdf"
+               download
+               class="reset"
+               style="
+               display:inline-block;
+               padding:12px 24px;
+               border-radius:12px;
+               text-decoration:none;
+               ">
+
+               ⬇ Download PDF
+
+            </a>
+
+          </div>
+
+          <iframe 
+            src="SNI 03-3985-2000, Fire Alarm.pdf"
+            width="100%"
+            height="600px"
+            style="
+            border:1px solid #ccc;
+            border-radius:18px;
+            background:white;
+            ">
+          </iframe>
+
+        </div>
+
       </div>
 
-      <iframe src="SNI 03-3985-2000, Fire Alarm.pdf" width="100%" height="600px" style="border:1px solid #ccc;border-radius:10px;"></iframe>
+    </div>
 
-      <p style="margin-top:20px;"><b>NFPA 72-2019</b><br></p>
-      <div style="margin:20px 0">
-        <a href="NFPA 72-2019.pdf" target="_blank" class="back" style="display:inline-block; margin-right:10px; text-decoration:none;">📄 Buka PDF</a>
-        <a href="NFPA 72-2019.pdf" download class="reset" style="display:inline-block; padding:12px 24px; border-radius:12px; text-decoration:none;">⬇ Download PDF</a>
+    <!-- NFPA -->
+    <div class="accordion">
+
+      <button class="accordion-btn">
+        📙 NFPA 72-2019
+      </button>
+
+      <div class="accordion-content">
+
+        <div class="materi-card">
+
+          <div class="materi-header">
+
+            <img src="img/regulation.png"
+                 class="materi-icon"
+                 onerror="this.style.display='none'">
+
+            <div>
+
+              <h2>NFPA 72-2019</h2>
+
+              <div class="materi-sub">
+                National Fire Alarm and Signaling Code
+              </div>
+
+            </div>
+
+          </div>
+
+          <p>
+            Standar internasional mengenai sistem alarm kebakaran 
+            dan sistem signaling untuk perlindungan bangunan.
+          </p>
+
+          <div style="margin:25px 0; text-align:center;">
+
+            <a href="NFPA 72-2019.pdf"
+               target="_blank"
+               class="back"
+               style="
+               display:inline-block;
+               margin-right:10px;
+               text-decoration:none;
+               ">
+
+               📄 Buka PDF
+
+            </a>
+
+            <a href="NFPA 72-2019.pdf"
+               download
+               class="reset"
+               style="
+               display:inline-block;
+               padding:12px 24px;
+               border-radius:12px;
+               text-decoration:none;
+               ">
+
+               ⬇ Download PDF
+
+            </a>
+
+          </div>
+
+          <iframe 
+            src="NFPA 72-2019.pdf"
+            width="100%"
+            height="600px"
+            style="
+            border:1px solid #ccc;
+            border-radius:18px;
+            background:white;
+            ">
+          </iframe>
+
+        </div>
+
       </div>
 
-      <iframe src="NFPA 72-2019.pdf" width="100%" height="600px" style="border:1px solid #ccc;border-radius:10px;"></iframe>
-    `;
-  }
+    </div>
+
+  </div>
+
+  `;
+
+  // ACCORDION FUNCTION
+  const accordionBtn =
+  document.querySelectorAll('.accordion-btn');
+
+  accordionBtn.forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+      const content =
+      btn.nextElementSibling;
+
+      if(content.style.maxHeight){
+
+        content.style.maxHeight = null;
+
+      } else {
+
+        content.style.maxHeight =
+        content.scrollHeight + "px";
+
+      }
+
+    });
+
+  });
+
+}
 
   // Render Calculator Page
   if (type === 'kalkulator') {
