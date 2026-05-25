@@ -682,3 +682,95 @@ table tr:nth-child(even) td{
   }
 }
 
+/* ===================================
+   ACCORDION MATERI
+=================================== */
+
+.accordion{
+  margin-bottom:25px;
+}
+
+/* BUTTON JUDUL */
+.accordion-btn{
+
+  width:100%;
+
+  background:linear-gradient(
+    to right,
+    #ff6a00,
+    #ff9500
+  );
+
+  color:white;
+
+  padding:16px 20px;
+
+  border:none;
+
+  border: radius 16px;
+
+  font-size:1.05rem;
+  font-weight:700;
+
+  text-align:left;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  box-shadow:
+    0 5px 15px rgba(255,106,0,.25);
+}
+
+/* HOVER */
+.accordion-btn:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(255,106,0,.30);
+}
+
+/* SAAT ACTIVE */
+.accordion-btn.active{
+
+  border-radius:20px 20px 0 0;
+}
+
+/* ISI ACCORDION */
+.accordion-content{
+
+  max-height:0;
+
+  overflow:hidden;
+
+  transition:max-height .45s ease;
+
+  background:rgba(255,255,255,.96);
+
+  border-radius:0 0 20px 20px;
+
+  padding:0 25px;
+}
+
+/* AGAR ISI TIDAK MEpet */
+.accordion-content .materi-card{
+
+  margin-top:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .accordion-btn{
+
+    font-size:1rem;
+
+    padding:18px;
+  }
+
+}
+
+.accordion{
+  margin-bottom:14px;
+}
