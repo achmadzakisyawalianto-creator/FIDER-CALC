@@ -90,7 +90,7 @@ if (type === 'materi') {
 
           <div class="materi-header">
 
-            <img src="img/heat-detector.png"
+            <img src="heat-detector.png"
                  class="materi-icon"
                  onerror="this.style.display='none'">
 
@@ -140,7 +140,7 @@ if (type === 'materi') {
 
           <div class="materi-header">
 
-            <img src="img/smoke-detector.png"
+            <img src="smoke-detector.png"
                  class="materi-icon"
                  onerror="this.style.display='none'">
 
