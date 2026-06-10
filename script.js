@@ -779,19 +779,85 @@ function hitung(isZooming) {
     <code>Heat = 0,7 × ${Sh.toFixed(2)} = ${Dh.toFixed(2)} m</code>
   </div>
 
-  <div class="calc-step">
-    <h3>📏 Evaluasi Jarak Aktual Antar Detektor (Uniform)</h3>
+ <div class="calc-step">
+  <h3>📏 Evaluasi Jarak Aktual Antar Detektor (Uniform)</h3>
 
-    <p><b>Smoke Detector</b></p>
-    <code>Jarak aktual arah Panjang = ${P} / (${jdpS}+1) = ${jarakAktualPs.toFixed(2)} m</code><br>
-    <code>Jarak aktual arah Lebar = ${L} / (${jdlS}+1) = ${jarakAktualLs.toFixed(2)} m</code><br>
-    <code>Offset ke dinding = ${offsetPs.toFixed(2)} m & ${offsetLs.toFixed(2)} m</code>
+  <h4>🔴 Smoke Detector</h4>
 
-    <p style="margin-top:12px"><b>Heat Detector</b></p>
-    <code>Jarak aktual arah Panjang = ${P} / (${jdpH}+1) = ${jarakAktualPh.toFixed(2)} m</code><br>
-    <code>Jarak aktual arah Lebar = ${L} / (${jdlH}+1) = ${jarakAktualLh.toFixed(2)} m</code><br>
-    <code>Offset ke dinding = ${offsetPh.toFixed(2)} m & ${offsetLh.toFixed(2)} m</code>
+  <p>
+    Jumlah detector arah panjang = <b>${jdpS}</b> titik.
+    Untuk mendapatkan posisi detector yang merata,
+    ruangan dibagi menjadi <b>${jdpS + 1}</b> bagian.
+  </p>
+
+  <code>
+    Jarak aktual arah panjang = ${P} / (${jdpS}+1)
+    = ${jarakAktualPs.toFixed(2)} m
+  </code>
+
+  <p>
+    Artinya detector pertama ditempatkan
+    <b>${jarakAktualPs.toFixed(2)} m</b>
+    dari dinding kiri dan memiliki jarak yang sama
+    terhadap detector berikutnya.
+  </p>
+
+  <code>
+    Jarak aktual arah lebar = ${L} / (${jdlS}+1)
+    = ${jarakAktualLs.toFixed(2)} m
+  </code>
+
+  <p>
+    Artinya detector ditempatkan
+    <b>${jarakAktualLs.toFixed(2)} m</b>
+    dari dinding atas dan bawah.
+  </p>
+
+  <div class="info-box">
+    <b>Interpretasi Smoke Detector</b><br>
+    Detector dipasang merata dengan jarak
+    ${jarakAktualPs.toFixed(2)} m pada arah panjang
+    dan ${jarakAktualLs.toFixed(2)} m pada arah lebar.
   </div>
+
+  <hr style="margin:20px 0">
+
+  <h4>🔵 Heat Detector</h4>
+
+  <p>
+    Jumlah detector arah panjang = <b>${jdpH}</b> titik.
+    Ruangan dibagi menjadi <b>${jdpH + 1}</b> bagian.
+  </p>
+
+  <code>
+    Jarak aktual arah panjang = ${P} / (${jdpH}+1)
+    = ${jarakAktualPh.toFixed(2)} m
+  </code>
+
+  <p>
+    Detector pertama berada pada jarak
+    <b>${jarakAktualPh.toFixed(2)} m</b>
+    dari dinding.
+  </p>
+
+  <code>
+    Jarak aktual arah lebar = ${L} / (${jdlH}+1)
+    = ${jarakAktualLh.toFixed(2)} m
+  </code>
+
+  <p>
+    Detector dipasang setiap
+    <b>${jarakAktualLh.toFixed(2)} m</b>
+    pada arah lebar ruangan.
+  </p>
+
+  <div class="info-box">
+    <b>Interpretasi Heat Detector</b><br>
+    Detector dipasang merata dengan jarak
+    ${jarakAktualPh.toFixed(2)} m pada arah panjang
+    dan ${jarakAktualLh.toFixed(2)} m pada arah lebar.
+  </div>
+</div>
 
   <div style="text-align:center; margin:20px 0;">
     <button onclick="updateZoom(0.2)" style="padding:5px 15px; margin:0 5px; cursor:pointer;">➕ Zoom In</button>
