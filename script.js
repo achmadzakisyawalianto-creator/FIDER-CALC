@@ -615,7 +615,7 @@ if (type === 'regulasi') {
   // Render Calculator Page
   if (type === 'kalkulator') {
     area.innerHTML = `
-      <h2>Kalkulator Perhitungan Fire Detector</h2>
+      <h2>Perhitungan Kebutuhan Detektor Kebakaran</h2>
 
       <div class="form-group">
         <label for="p">Panjang Ruangan (M)</label>
